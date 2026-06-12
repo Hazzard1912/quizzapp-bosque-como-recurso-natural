@@ -1,0 +1,108 @@
+import type { Question } from '../types';
+
+export const questions: Question[] = [
+  {
+    id: 1,
+    question: 'Vas caminando por los bosques de San Antonio, aquí en el Valle, y ves a un vecino cortando unos árboles de su propio terreno para vender la madera. ¿Eso se puede hacer así no más por ser su propiedad?',
+    options: [
+      'Claro, si el terreno es de él, lo que crezca ahí también es suyo.',
+      'No, compadre. En Colombia los bosques y la flora silvestre son de la nación, necesita permiso obligatorio.',
+      'Solo si corta menos de 10 árboles al día no le dicen nada.',
+      'Sí, pero solo si los vende a la maderera más cercana de San Antonio.',
+    ],
+    correctAnswer: 1,
+    explanation: '¡Totalmente! Según el Decreto 1076 de 2015, el suelo puede tener dueño privado, pero los recursos forestales naturales son patrimonio de la Nación. Para poder aprovecharlos legalmente con fines comerciales, hay que tramitar un permiso ante la autoridad ambiental local (en este caso, la CVC). ¡Hacerlo sin permiso es ilegal!',
+    image: 'q1_bosque_propiedad.png',
+  },
+  {
+    id: 2,
+    question: 'Imagina que una comunidad cerca al río Pance necesita sacar un par de guaduas para arreglar el techo de la escuela de la vereda, sin negocio de por medio. ¿Qué tipo de aprovechamiento forestal es este?',
+    options: [
+      'Aprovechamiento Comercial Industrial.',
+      'Aprovechamiento Único.',
+      'Aprovechamiento Doméstico.',
+      'Aprovechamiento Exportador para el exterior.',
+    ],
+    correctAnswer: 2,
+    explanation: '¡Exacto! El Decreto 1076 define el "Aprovechamiento Doméstico" como aquel que se hace exclusivamente para satisfacer necesidades vitales del hogar o la comunidad, sin que se puedan comercializar los productos. Ojo: aunque es doméstico, no significa que sea libre; la norma dice que las Corporaciones Autónomas (como la CVC) deben vigilar que no se abuse del recurso.',
+    image: 'q2_guadua_escuela.png',
+  },
+  {
+    id: 3,
+    question: 'Una empresa constructora quiere hacer una nueva carretera en el Valle y para eso obligatoriamente tiene que tumbar un pedazo de bosque natural que nunca se va a recuperar. ¿Qué tipo de permiso exige la ley para esto?',
+    options: [
+      'Aprovechamiento Forestal Único.',
+      'Aprovechamiento Forestal Persistente.',
+      'Licencia de Tala Exprés.',
+      'Permiso de Poda y Jardinería.',
+    ],
+    correctAnswer: 0,
+    explanation: '¡Esa es! Se llama "Aprovechamiento Único" porque se realiza una sola vez en áreas donde se demuestra que el suelo tendrá un uso definitivo diferente al forestal (como una obra pública o interés social). Lo clave aquí es que la ley colombiana obliga a la empresa a pagar una "compensación ambiental", es decir, sembrar o restaurar un área equivalente en otro lado.',
+    image: 'q3_carretera_compensacion.png',
+  },
+  {
+    id: 4,
+    question: 'Vas en tu carro por la recta Cali-Palmira y la policía detiene un camión lleno de bloques de madera. ¿Qué documento sagrado le van a pedir al chofer para demostrar que esa madera no viene de la deforestación ilegal?',
+    options: [
+      'La factura de venta de la ferretería del pueblo.',
+      'El Salvoconducto Único Nacional en Línea (SUNL).',
+      'Una carta firmada por el alcalde del municipio.',
+      'El carnet de la ANDI del transportador.',
+    ],
+    correctAnswer: 1,
+    explanation: '¡Así es! Ni la factura ni el autógrafo del alcalde sirven. En Colombia, el transporte de productos de la flora silvestre requiere obligatoriamente el Salvoconducto Único Nacional (regulado a través de la plataforma VITAL). Este documento certifica desde qué bosque legal salió la madera hasta su destino final. Si no lo lleva, la policía incauta la mercancía inmediatamente.',
+    image: 'q4_salvoconducto_camion.png',
+  },
+  {
+    id: 5,
+    question: 'Un agricultor en el Valle quiere explotar madera de manera sostenible, asegurando que el bosque se regenere y dure para siempre. ¿Qué instrumento técnico le exige la CVC presentar antes de tocar el primer árbol?',
+    options: [
+      'Un mapa dibujado a mano alzada de la finca.',
+      'Un Plan de Manejo Forestal (PMF).',
+      'Un recibo de pago de impuesto predial.',
+      'Una carta de la comunidad diciendo que sí pueden talar.',
+    ],
+    correctAnswer: 1,
+    explanation: '¡Exacto! Para los aprovechamientos persistentes (es decir, los que buscan un rendimiento sostenible a largo plazo), la ley exige un Plan de Manejo Forestal. Este es un estudio serio hecho por profesionales donde se detalla cuántos árboles hay, cuáles se van a cortar, cómo se van a renovar y qué medidas se tomarán para proteger la fauna y las fuentes hídricas del Valle.',
+    image: 'q5_plan_manejo.png',
+  },
+  {
+    id: 6,
+    question: 'Estás planeando un proyecto en una finca cerca a Palmira y encuentras varios árboles de Cedro Negro y un par de Palmas de Cera. ¿Puedes incluirlos en tu plan de tala para madera?',
+    options: [
+      'Sí, siempre y cuando siembres el doble de esos mismos árboles.',
+      'No, ni los toques. Esas especies tienen "Veda", lo que significa que su tala está prohibida por ley para protegerlas de la extinción.',
+      'Solo si pides un permiso especial de construcción express en la alcaldía.',
+      'Sí, pero solo en temporada de verano cuando no hay lluvias.',
+    ],
+    correctAnswer: 1,
+    explanation: '¡Exacto! En Colombia existen especies con "Veda" (prohibición de tala). El Cedro y la Palma de Cera (nuestro árbol nacional) están super protegidos por normativas nacionales y resoluciones de la CVC debido a su estado crítico de amenaza. Talar una especie vedada acarrea multas gigantescas y procesos penales.',
+    image: 'q6_especies_vedadas.png',
+  },
+  {
+    id: 7,
+    question: 'Un amigo te dice: "Voy a quemar esta maleza y este pedazo de bosque seco para limpiar el lote rápido y sembrar caña". Pensando en los incendios que azotan los cerros de Cali, ¿qué le adviertes según la ley?',
+    options: [
+      'Que lo haga temprano antes de que el sol caliente mucho.',
+      'Que las quemas "abiertas" o de preparación agrícola están prohibidas y son un delito ambiental grave.',
+      'Que avise a los vecinos primero por si se pasa el fuego.',
+      'Que solo queme los fines de semana cuando la policía no está patrullando.',
+    ],
+    correctAnswer: 1,
+    explanation: '¡Totalmente! Las quemas abiertas para limpiar terrenos están rotundamente prohibidas por el Código Nacional de Seguridad y Convivencia y las alertas de la CVC. No solo destruyen el suelo y el bosque seco tropical (uno de los ecosistemas más amenazados del Valle), sino que provocar un incendio forestal da cárcel en Colombia.',
+    image: 'q7_quema_prohibida.png',
+  },
+  {
+    id: 8,
+    question: 'Tu tío tiene una finca en la cuenca del río Amaime y decidió dejar de tumbar árboles para conservar el bosque nativo que protege el agua. ¿La ley colombiana le da algún beneficio por hacer esto?',
+    options: [
+      'No, conservar es un deber ciudadano pero no da ningún beneficio económico.',
+      'Sí, puede aplicar al Pago por Servicios Ambientales (PSA), donde le dan un incentivo económico por cuidar el bosque.',
+      'Le perdonan el pago de los servicios públicos de la finca.',
+      'Solo si planta árboles de eucalipto para que crezcan rápido.',
+    ],
+    correctAnswer: 1,
+    explanation: '¡Bien pensado! La ley en Colombia premia a los buenos ciudadanos a través del Pago por Servicios Ambientales (PSA). Es un mecanismo donde el Estado (a través de la Gobernación o la CVC) le paga a los propietarios de tierras para que mantengan los bosques en pie, reconociendo que ese bosque nos da agua limpia y aire puro a todos los vallecaucanos.',
+    image: 'q8_psa_bosque.png',
+  },
+];

@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  /* Paleta Herbario Digital - Tierra y Bosque */
+  --color-paper: #F4F1EA;
+  --color-bark: #3A2E22;
+  --color-moss: #3A4D39;
+  --color-leaf: #6B7B5E;
+  --color-soil: #8B5A2B;
+  --color-terracotta: #A0522D;
+  --color-sand: #D4C5B0;
+  --color-parchment: #E8E0D4;
+  --color-gold: #C9A959;
+  --color-cream: #FAF8F3;
+
+  /* Mantener compatibilidad con nombres legacy mapeados a nuevos tonos */
+  --color-forest-50: #F4F1EA;
+  --color-forest-100: #E8E0D4;
+  --color-forest-200: #D4C5B0;
+  --color-forest-500: #6B7B5E;
+  --color-forest-700: #3A4D39;
+  --color-forest-900: #3A2E22;
+  --color-earth-100: #EDE6D9;
+  --color-earth-500: #8B5A2B;
+  --color-earth-700: #5D4E37;
+
+  /* Tipografía */
+  --font-sans: 'Sora', system-ui, sans-serif;
+  --font-display: 'Marcellus', 'Georgia', serif;
+  --font-serif: 'Marcellus', 'Georgia', serif;
+
+  /* Animaciones custom */
+  --animate-grow: grow 0.5s ease-out;
+  --animate-shake: shake 0.5s ease-in-out;
+  --animate-float: float 3s ease-in-out infinite;
+}
+
+@keyframes grow {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Grano sutil de papel para el fondo */
+body {
+  background-color: var(--color-paper);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+}
