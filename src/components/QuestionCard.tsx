@@ -21,7 +21,7 @@ export function QuestionCard({ question, currentIndex, image }: QuestionCardProp
         <div className="w-full bg-parchment/40 p-4 md:p-6">
           <div className="relative bg-paper rounded-xl border border-sand/60 overflow-hidden shadow-sm">
             <img
-              src={`/images/${image}`}
+              src={`${import.meta.env.BASE_URL}images/${image}`}
               alt={`Ilustración pregunta ${currentIndex + 1}`}
               className="w-full h-auto object-contain"
               loading="lazy"
