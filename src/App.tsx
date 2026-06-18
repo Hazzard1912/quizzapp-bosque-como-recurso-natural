@@ -52,6 +52,8 @@ function App() {
       sound.playStart();
     }
     nextQuestion();
+    // En móvil, volver arriba al cambiar de pregunta
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Reiniciar
@@ -101,7 +103,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-paper relative">
-      {/* === MOBILE: Header + Footer === */}
+      {/* === MOBILE: Header fijo === */}
       <header className="md:hidden fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-sm border-b border-sand/40 shadow-sm">
         <div className="max-w-3xl mx-auto px-4 py-2 flex items-center justify-between gap-3">
           <ScoreDisplay
@@ -115,12 +117,6 @@ function App() {
           )}
         </div>
       </header>
-
-      <footer className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-sm border-t border-sand/40 shadow-[0_-2px_8px_rgba(0,0,0,0.03)]">
-        <div className="max-w-3xl mx-auto px-4 py-2">
-          <ProgressBar current={state.currentQuestionIndex} total={questions.length} />
-        </div>
-      </footer>
 
       {/* === DESKTOP: Paneles laterales fijos === */}
       {/* Panel izquierdo: Score + Timer */}
@@ -150,8 +146,13 @@ function App() {
       </aside>
 
       {/* === Contenido principal === */}
-      <main className="pt-24 md:pt-8 pb-24 md:pb-8 px-4 md:px-0">
+      <main className="pt-24 md:pt-8 pb-8 px-4 md:px-0">
         <div className="max-w-3xl mx-auto md:mx-auto">
+          {/* Progreso en móvil (dentro del flujo) */}
+          <div className="md:hidden mb-6">
+            <ProgressBar current={state.currentQuestionIndex} total={questions.length} />
+          </div>
+
           <AnimatePresence mode="wait">
             <QuestionCard
               key={currentQuestion.id}
